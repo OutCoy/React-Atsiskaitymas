@@ -130,12 +130,12 @@
   "users": [
     {
       "id": "c5688580-85c8-4504-9cb8-628dbc2268dd",
-      "username": "user1",
+      "email": "user1@email.com",
       "password": "123"
     },
     {
       "id": "d51c3584-16c7-41e4-a5fb-c917b055f350",
-      "username": "zmogus",
+      "email": "zmogus@email.com",
       "password": "voras"
     }
   ]
