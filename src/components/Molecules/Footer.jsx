@@ -10,6 +10,7 @@ const StyledFooter = styled.footer`
   font-weight: 700;
   color: #3a3a3a;
   border-top: 2px solid #3d3d3d;
+  box-sizing: border-box;
 `;
 
 const Footer = () => {

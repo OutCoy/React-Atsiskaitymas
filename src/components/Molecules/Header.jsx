@@ -10,6 +10,8 @@ const StyledHeader = styled.header`
   justify-content: space-between;
   align-items: center;
   background-color: #a7a7a7;
+  border-bottom: 2px solid #3d3d3d;
+  box-sizing: border-box;
   > a {
     height: 100%;
   }
