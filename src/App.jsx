@@ -11,7 +11,6 @@ import NewPlant from "./components/Pages/NewPlant";
 
 const App = () => {
   const { currentUser } = useContext(UsersContext);
-  console.log(currentUser);
 
   return (
     <>

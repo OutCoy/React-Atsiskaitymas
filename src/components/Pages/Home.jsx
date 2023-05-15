@@ -42,7 +42,6 @@ const StyledHome = styled.main`
 
 const Home = () => {
   const { plants, loadingData } = useContext(PlantsContext);
-  console.log(plants);
 
   return (
     <StyledHome>
