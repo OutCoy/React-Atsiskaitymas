@@ -65,7 +65,7 @@ const Header = () => {
       <Link to="/">
         <img
           src="https://www.kadencewp.com/wp-content/uploads/2020/10/alogo-1.png"
-          alt="Logo image placeholder"
+          alt="Logo placeholder"
         />
       </Link>
       {currentUser && (
