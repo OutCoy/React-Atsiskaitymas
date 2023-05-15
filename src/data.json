@@ -125,6 +125,13 @@
       "image": "https://images.unsplash.com/photo-1629984957815-d5476f9a9146?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8QmVnb25pYXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=400&q=60",
       "family": "Begoniaceae",
       "id": "ce0a16fc-0d19-47b5-90da-81bc405b50a6"
+    },
+    {
+      "name": "Chrysanthemum",
+      "short_description": "A flowering plant with showy blooms",
+      "image": "https://images.unsplash.com/photo-1589914748897-1bd1b6bff4bd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+      "family": "Asteraceae",
+      "id": "63f8677d-b9e5-4003-b52f-3fdc71bf60ee"
     }
   ],
   "users": [

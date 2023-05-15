@@ -34,25 +34,33 @@ const StyledHome = styled.main`
     box-shadow: 0 0 2px black;
     text-decoration: none;
   }
-  > a:hover{
+  > a:hover {
     background-color: #5e5e5e68;
     color: #000;
   }
 `;
 
 const Home = () => {
-  const { plants } = useContext(PlantsContext);
+  const { plants, loadingData } = useContext(PlantsContext);
   console.log(plants);
 
   return (
     <StyledHome>
-      <Link to='/addNewPlant'>Add New Plant</Link>
-      <h1>All plants</h1>
-      <div className="allCards">
-        {plants.map((plant) => (
-          <Card data={plant} key={plant.id} />
-        ))}
-      </div>
+      <Link to="/addNewPlant">Add New Plant</Link>
+      {loadingData ? (
+        <h1>Loading...</h1>
+      ) : plants.length === 0 ? (
+        <h1>Currently there are no plants, feel free to add some!</h1>
+      ) : (
+        <>
+          <h1>All plants</h1>
+          <div className="allCards">
+            {plants.map((plant) => (
+              <Card data={plant} key={plant.id} />
+            ))}
+          </div>
+        </>
+      )}
     </StyledHome>
   );
 };

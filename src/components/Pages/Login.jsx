@@ -56,10 +56,13 @@ const Login = () => {
     },
     validationSchema: validationSchema,
     onSubmit: (values) => {
-      const loggedInUser = users.find(user => user.email === values.email && user.password === values.password);
-      if(loggedInUser) {
+      const loggedInUser = users.find(
+        (user) =>
+          user.email === values.email && user.password === values.password
+      );
+      if (loggedInUser) {
         setCurrentUser(loggedInUser);
-        navigate('/');
+        navigate("/");
       } else {
         setIsInvalidLogin(true);
         setTimeout(() => {
@@ -104,7 +107,7 @@ const Login = () => {
           )}
         </div>
         <input type="submit" value="Log In" />
-        {isInvalidLogin && <p>Wrong email or password</p>}
+        {isInvalidLogin && <p>Incorrect email or password</p>}
       </form>
     </StyledLogin>
   );

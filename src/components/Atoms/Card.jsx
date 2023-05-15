@@ -10,23 +10,25 @@ const StyledCard = styled.div`
   text-align: center;
   display: flex;
   flex-direction: column;
-  >h2{
-    margin: 0 0 10px 0;
-  }
+  justify-content: space-evenly;
   >img{
     width: 100%;
     height: 300px;
     object-fit: contain;
+  }
+  >*{
+    padding: 0;
+    margin: 0;
   }
 `;
 
 const Card = ({data}) => {
   return (
     <StyledCard>
-      <h2>{data.name}</h2>
       <img src={data.image} alt="Flower"/>
-      <p><span>Family: {data.family}</span></p>
-      <p><span>Description: {data.short_description}</span></p>
+      <h2>{data.name}</h2>
+      <p><span>Family:</span> {data.family}</p>
+      <p><span>Description:</span> {data.short_description}</p>
     </StyledCard>
   );
 }

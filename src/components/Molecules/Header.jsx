@@ -21,24 +21,11 @@ const StyledHeader = styled.header`
   > div {
     display: flex;
     gap: 20px;
-    > a {
-      text-decoration: none;
-      color: #8ac1ff;
-      padding: 10px;
-      background-color: #2525256a;
-      border-radius: 5px;
-      box-shadow: 0 0 2px black;
-      font-size: 1.1rem;
-    }
     > a:hover {
       background-color: #b6b6b66a;
       color: #000;
     }
-    .active {
-      background-color: #7effce93;
-      color: #fff;
-    }
-    >button{
+    > button {
       cursor: pointer;
       border: none;
       padding: 10px;
@@ -47,15 +34,31 @@ const StyledHeader = styled.header`
       background-color: #ffa7a7;
       box-shadow: 0 0 2px black;
     }
-    >button:hover{
+    > button:hover {
       background-color: #ff000090;
     }
+  }
+  .homeLink{
+    height: unset;
+  }
+  div > a,
+  .homeLink {
+    text-decoration: none;
+    color: #8ac1ff;
+    padding: 10px;
+    background-color: #2525256a;
+    border-radius: 5px;
+    box-shadow: 0 0 2px black;
+    font-size: 1.1rem;
+  }
+  .active {
+    background-color: #7effce93;
+    color: #fff;
   }
 `;
 
 const Header = () => {
   const { currentUser, setCurrentUser } = useContext(UsersContext);
-  
 
   return (
     <StyledHeader>
@@ -65,6 +68,11 @@ const Header = () => {
           alt="Logo image placeholder"
         />
       </Link>
+      {currentUser && (
+        <NavLink className="homeLink" to="/">
+          Home
+        </NavLink>
+      )}
       <div>
         {!currentUser ? (
           <>
@@ -72,9 +80,13 @@ const Header = () => {
             <NavLink to="/register">Register</NavLink>
           </>
         ) : (
-          <button onClick={() => {
-            setCurrentUser(null);
-          }}>Log Out</button>
+          <button
+            onClick={() => {
+              setCurrentUser(null);
+            }}
+          >
+            Log Out
+          </button>
         )}
       </div>
     </StyledHeader>
