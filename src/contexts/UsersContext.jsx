@@ -18,7 +18,7 @@ const reducer = (state, action) => {
 const UsersProvider = ({children}) => {
 
   const [users, setUsers] = useReducer(reducer, []);
-  const [currentUser, setCurrentUser] = useState({});
+  const [currentUser, setCurrentUser] = useState(null);
 
   useEffect(() => {
     fetch('http://localhost:8080/users').then(res=>res.json()).then(data=>{
