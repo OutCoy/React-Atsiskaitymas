@@ -7,6 +7,7 @@ import UsersContext from './contexts/UsersContext';
 import Home from './components/Pages/Home';
 import Register from './components/Pages/Register';
 import Login from './components/Pages/Login';
+import NewPlant from './components/Pages/NewPlant';
 
 const App = () => {
 
@@ -20,6 +21,7 @@ const App = () => {
         <Route  path='/register' element={<Register />}/>
         <Route path='/login' element={<Login />}/>
         <Route path='/' element={currentUser ? <Home /> : <Navigate to='/login' />}/>
+        <Route path='/addNewPlant' element={currentUser ? <NewPlant /> : <Navigate to='/login' />}/>
       </Routes>
       <Footer />
     </>
