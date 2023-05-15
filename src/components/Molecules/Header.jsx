@@ -66,14 +66,14 @@ const Header = () => {
         />
       </Link>
       <div>
-        {currentUser ? (
+        {!currentUser ? (
           <>
             <NavLink to="/login">Log In</NavLink>
             <NavLink to="/register">Register</NavLink>
           </>
         ) : (
           <button onClick={() => {
-            setCurrentUser({});
+            setCurrentUser(null);
           }}>Log Out</button>
         )}
       </div>
