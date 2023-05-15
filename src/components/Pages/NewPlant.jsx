@@ -39,8 +39,7 @@ const StyledNewPlant = styled.main`
 `;
 
 const NewPlant = () => {
-
-  const {setPlants, PlantsActionTypes} = useContext(PlantsContext);
+  const { setPlants, PlantsActionTypes } = useContext(PlantsContext);
   const navigate = useNavigate();
 
   const validationSchema = Yup.object({
@@ -69,9 +68,9 @@ const NewPlant = () => {
       };
       setPlants({
         type: PlantsActionTypes.add,
-        data: plant
+        data: plant,
       });
-      navigate('/');
+      navigate("/");
     },
   });
 

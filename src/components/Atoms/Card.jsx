@@ -11,26 +11,30 @@ const StyledCard = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  >img{
+  > img {
     width: 100%;
     height: 300px;
     object-fit: contain;
   }
-  >*{
+  > * {
     padding: 0;
     margin: 0;
   }
 `;
 
-const Card = ({data}) => {
+const Card = ({ data }) => {
   return (
     <StyledCard>
-      <img src={data.image} alt="Flower"/>
+      <img src={data.image} alt="Flower" />
       <h2>{data.name}</h2>
-      <p><span>Family:</span> {data.family}</p>
-      <p><span>Description:</span> {data.short_description}</p>
+      <p>
+        <span>Family:</span> {data.family}
+      </p>
+      <p>
+        <span>Description:</span> {data.short_description}
+      </p>
     </StyledCard>
   );
-}
- 
+};
+
 export default Card;

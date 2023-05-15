@@ -38,7 +38,7 @@ const StyledHeader = styled.header`
       background-color: #ff000090;
     }
   }
-  .homeLink{
+  .homeLink {
     height: unset;
   }
   div > a,
